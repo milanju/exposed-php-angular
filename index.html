@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html ng-app="barcodesExposed" ng-controller="ladderController">
+  <head>
+    <title>Barcodes Exposed - EU GM Ladder (PHP / Angular)</title>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+  </head>
+  <body>
+    <div class="main">
+      <div class="head">
+        <h1>Barcodes Exposed</h1>
+        <a class="btn {{showLoader()}}" ng-click="refresh()">
+          <span class="refresh-text">refresh</span>
+          <span class="loading-text">loading..</span>
+        </a>
+      </div>
+      <table>
+        <tr>
+          <th>Rank</th>
+          <th>Region</th>
+          <th>Name</th>
+          <th>Wins</th>
+          <th>Losses</th>
+          <th>Points</th>
+        </tr>
+        <tr ng-repeat="player in ladder">
+          <td>{{$index + 1}}</td>
+          <td>EU</td>
+          <td>{{player.character.displayName}} {{getAlias(player.character.id)}}</td>
+          <td>{{player.wins}}</td>
+          <td>{{player.losses}}</td>
+          <td>{{player.points}}</td>
+        </tr>
+      </table>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>

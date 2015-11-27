@@ -1,0 +1,94 @@
+body {
+  background-color: #eee;
+  font-size: 14px;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.main {
+  overflow: auto;
+  max-width: 1000px;
+  width: 100%;
+  margin: 0 auto;
+  background-color: #fff;
+  border-radius: 2px;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+}
+
+@media (min-width: 760px) {
+  .main {
+    width: 80%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .main {
+    width: 60%;
+  }
+}
+
+.head {
+  overflow: hidden;
+  padding: 10px;
+}
+
+h1 {
+  float: left;
+  display: inline-block;
+  margin: 0;
+}
+
+.btn {
+  position: relative;
+  display: inline-block;
+  float: right;
+  margin-top: 6px;
+  padding: 8px 10px;
+  background-color: #00c853;
+  color: #fff;
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+td, th {
+  text-align: right;
+  padding: 10px;
+}
+
+td:nth-child(2), th:nth-child(2),
+td:nth-child(3), th:nth-child(3) {
+  text-align: left;
+}
+
+tr {
+  border-top: solid 1px #ddd;
+  -webkit-transition: background-color: 0.2s;
+  transition: background-color 0.2s;
+}
+
+tr:hover {
+  background-color: #eee;
+}
+
+.aka {
+  color: #d32f2f;
+  font-weight: bold;
+}
+
+.loading-text {
+  display: none;
+}
+
+.loading .refresh-text {
+  display: none;
+}
+
+.loading .loading-text {
+  display: inline-block;
+}
